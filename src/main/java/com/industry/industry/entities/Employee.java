@@ -2,17 +2,15 @@ package com.industry.industry.entities;
 
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
-@Getter
-@Setter
-@Table(name="employee")
-public class Industry {
+@Data
+@Table(name= "person")
+public class Employee {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
+ 
     @Id
     @Column(name="id")
     private int id;
@@ -38,7 +36,7 @@ public class Industry {
     @Column(name = "manager_id")
     private int managerId;
 
-    @Column(name = "past-experience")
+    @Column(name = "past_experience")
     private long pastExperience;
 
     @Column(name = "past_company")
